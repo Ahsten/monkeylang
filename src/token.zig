@@ -52,6 +52,11 @@ pub const TokenType = enum {
 const keywords = std.StaticStringMap(TokenType).initComptime(.{
     .{ "fn", .FUNCTION },
     .{ "let", .LET },
+    .{ "true", .TRUE },
+    .{ "false", .FALSE },
+    .{ "if", .IF },
+    .{ "else", .ELSE },
+    .{ "return", .RETURN },
 });
 
 pub fn lookupIdent(ident: []const u8) TokenType {
